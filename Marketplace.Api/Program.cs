@@ -34,7 +34,7 @@ builder.Services.AddOpenApi(options =>
 // DbContext
 var connection = builder.Configuration.GetConnectionString("DefaultConnection")
 				 ?? builder.Configuration["DB__CONNECTION"]
-				 ?? "Host=localhost;Port=5432;Database=marketplace;Username=marketplace;Password=marketplacepwd";
+				 ?? "Host=DESKTOP-D18AEQH;Port=5432;Database=marketplace;Username=marketplace;Password=marketplacepwd";
 builder.Services.AddDbContext<MarketplaceDbContext>(opts =>
 	opts.UseNpgsql(connection));
 
